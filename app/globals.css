@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #78100d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #78100d;
+  color: #fff8ec;
+  font-family: var(--font-montserrat), "Montserrat", "Avenir Next", Avenir, "Helvetica Neue",
+    Arial, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #e6b21a;
+  color: #14100f;
+}
+
+.placeholder-triangle {
+  width: 0;
+  height: 0;
+  border-left: 38px solid transparent;
+  border-right: 38px solid transparent;
+  border-bottom: 66px solid #fff;
+}
+
+@media (max-width: 640px) {
+  .placeholder-triangle {
+    border-left-width: 28px;
+    border-right-width: 28px;
+    border-bottom-width: 50px;
+  }
+}
