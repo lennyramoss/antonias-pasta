@@ -17,7 +17,7 @@ export default function LocationHours() {
               Trilenium Tigre
             </p>
             <p className="mt-5 text-[1rem] font-medium leading-relaxed text-antonias-body sm:text-[1.08rem]">
-              Todos los días 19:00 - 00:00
+              Todos los días 12:00 a 02:00
             </p>
           </address>
         </div>
