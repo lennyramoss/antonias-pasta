@@ -31,15 +31,14 @@ const ltSoul = localFont({
 
 const madeSunflower = localFont({
   src: "../public/fonts/FONT LOGO/made_sunflower/MADE Sunflower PERSONAL USE.otf",
-  src: "../public/fonts/FONT LOGO/catalish_huntera/Catalish Huntera.otf",
   display: "swap",
-  variable: "--font-catalish-huntera",
+  variable: "--font-made-sunflower",
 });
 
 const catalishHuntera = localFont({
-  src: "../public/fonts/FONT LOGO/made_sunflower/MADE Sunflower PERSONAL USE.otf",
+  src: "../public/fonts/FONT LOGO/catalish_huntera/Catalish Huntera.otf",
   display: "swap",
-    variable: "--font-made-sunflower",
+  variable: "--font-catalish-huntera",
 });
 
 export const metadata: Metadata = {

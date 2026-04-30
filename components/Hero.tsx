@@ -20,7 +20,7 @@ export default function Hero() {
             Antonias
           </span>
           <span
-            className="ml-[5rem] mt-1 block text-[1.55rem] leading-none tracking-[0.6em] [font-family:var(--font-made-sunflower)] sm:ml-[1.9rem] sm:text-[2.1rem] lg:ml-[20rem] lg:text-[2.8rem]"
+            className="ml-[5rem] mt-1 block text-[1.55rem] leading-none tracking-[0.48em] [font-family:var(--font-made-sunflower)] sm:ml-[1.9rem] sm:text-[2.1rem] lg:ml-[20rem] lg:text-[2.8rem]"
           >
             PASTA
           </span>
