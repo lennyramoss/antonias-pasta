@@ -60,6 +60,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Antonias Pasta" }],
   creator: "Antonias Pasta",
   publisher: "Antonias Pasta",
+  icons: {
+    icon: "/favicon.ico",
+  },
   alternates: {
     canonical: "/",
   },
