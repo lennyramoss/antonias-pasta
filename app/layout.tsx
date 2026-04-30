@@ -1,17 +1,45 @@
 import type { Metadata } from "next";
-import { Dancing_Script, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
+const ltSoul = localFont({
+  src: [
+    {
+      path: "../public/fonts/FONT SECUNDARIA/LTSoul-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/FONT SECUNDARIA/LTSoul-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/FONT SECUNDARIA/LTSoul-SemiBold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/FONT SECUNDARIA/LTSoul-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   display: "swap",
-  variable: "--font-montserrat",
+  variable: "--font-lt-soul",
 });
 
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
+const madeSunflower = localFont({
+  src: "../public/fonts/FONT LOGO/made_sunflower/MADE Sunflower PERSONAL USE.otf",
+  src: "../public/fonts/FONT LOGO/catalish_huntera/Catalish Huntera.otf",
   display: "swap",
-  variable: "--font-dancing-script",
+  variable: "--font-catalish-huntera",
+});
+
+const catalishHuntera = localFont({
+  src: "../public/fonts/FONT LOGO/made_sunflower/MADE Sunflower PERSONAL USE.otf",
+  display: "swap",
+    variable: "--font-made-sunflower",
 });
 
 export const metadata: Metadata = {
@@ -64,7 +92,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-AR">
-      <body className={`${montserrat.variable} ${dancingScript.variable}`}>{children}</body>
+      <body
+        className={`${ltSoul.variable} ${madeSunflower.variable} ${catalishHuntera.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

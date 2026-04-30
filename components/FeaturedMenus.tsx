@@ -30,11 +30,11 @@ export default function FeaturedMenus() {
             variant={menu.placeholder}
             className="aspect-square w-full"
           />
-          <div className="mt-5 max-w-[310px] text-antonias-gold">
-            <h3 className="text-[1.35rem] font-extrabold leading-tight sm:text-[1.55rem]">
+          <div className="mt-5 max-w-[310px]">
+            <h3 className="text-[1.35rem] font-extrabold leading-tight text-antonias-gold sm:text-[1.55rem]">
               {menu.title}
             </h3>
-            <p className="mt-2 text-[1rem] font-semibold leading-snug sm:text-[1.08rem]">
+            <p className="mt-2 text-[1rem] font-semibold leading-snug text-antonias-body sm:text-[1.08rem]">
               {menu.description}
             </p>
           </div>

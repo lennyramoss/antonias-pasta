@@ -46,11 +46,11 @@ export default function MenuGrid() {
             variant={item.placeholder}
             className="aspect-square w-full"
           />
-          <div className="mt-5 text-antonias-gold">
-            <h3 className="text-[1.18rem] font-extrabold leading-tight sm:text-[1.35rem]">
+          <div className="mt-5">
+            <h3 className="text-[1.18rem] font-extrabold leading-tight text-antonias-gold sm:text-[1.35rem]">
               {item.name}
             </h3>
-            <p className="mt-2 max-w-[250px] text-[0.95rem] font-semibold leading-snug sm:text-[1.02rem]">
+            <p className="mt-2 max-w-[250px] text-[0.95rem] font-semibold leading-snug text-antonias-body sm:text-[1.02rem]">
               {item.detail}
             </p>
           </div>

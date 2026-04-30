@@ -11,7 +11,7 @@ export default function About() {
         >
           Nosotros
         </h2>
-        <div className="mt-4 space-y-4 text-[0.95rem] font-medium leading-relaxed text-white sm:text-[1.05rem]">
+        <div className="mt-4 space-y-4 text-[0.95rem] font-medium leading-relaxed text-antonias-body sm:text-[1.05rem]">
           <p>
             En Antonias Pasta, celebramos la tradición italiana con pastas artesanales y una
             barra de cócteles de autor. Nuestro propuesta invita a disfrutar de un espacio

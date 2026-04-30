@@ -1,7 +1,6 @@
 import About from "@/components/About";
 import FeaturedMenus from "@/components/FeaturedMenus";
 import Footer from "@/components/Footer";
-import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import LocationHours from "@/components/LocationHours";
 import MenuCTA from "@/components/MenuCTA";
@@ -37,7 +36,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
       />
       <Hero />
-      <main className="bg-antonias-burgundy">
+      <main className="bg-antonias-base">
         <About />
         <SectionDivider className="mt-20 sm:mt-24" />
         <FeaturedMenus />

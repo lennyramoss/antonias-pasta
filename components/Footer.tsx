@@ -5,14 +5,14 @@ const footerColumns = [
   },
   {
     title: "Contacto",
-    lines: ["Instagram", "@antoniaspasta", "Reservas"],
+    lines: ["@antoniaspasta", "Reservas"],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-antonias-burgundy pb-14 text-antonias-gold">
-      <div className="mx-auto w-[calc(100%-2rem)] max-w-[700px] border-t border-white/50 pt-[68px]">
+    <footer className="bg-antonias-base pb-14 text-antonias-gold">
+      <div className="mx-auto w-[calc(100%-2rem)] max-w-[700px] border-t border-antonias-detail/80 pt-[68px]">
         <div className="grid gap-12 sm:grid-cols-[1fr_140px_140px] sm:gap-8">
           <div aria-label="Antonias Pasta" className="text-[1rem] font-extrabold leading-none">
             AP
@@ -20,7 +20,7 @@ export default function Footer() {
           {footerColumns.map((column) => (
             <div key={column.title}>
               <h2 className="text-[0.95rem] font-extrabold leading-tight">{column.title}</h2>
-              <ul className="mt-3 space-y-1.5 text-[0.88rem] font-semibold leading-snug">
+              <ul className="mt-3 space-y-1.5 text-[0.88rem] font-semibold leading-snug text-antonias-body">
                 {column.lines.map((line) => (
                   <li key={line}>{line}</li>
                 ))}

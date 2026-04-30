@@ -9,18 +9,19 @@ const config: Config = {
     extend: {
       colors: {
         antonias: {
-          burgundy: "#78100D",
-          burgundyDark: "#6F0D0B",
-          gold: "#E6B21A",
-          goldSoft: "#F1C33A",
-          cream: "#FAF9F6",
-          panel: "#F3F3F3",
-          ink: "#14100F",
+          base: "#000000",
+          detail: "#691314",
+          gold: "#F3A800",
+          goldSoft: "#FFC533",
+          body: "#BABABA",
+          cream: "#FFFFFF",
+          panel: "#691314",
+          ink: "#000000",
         },
       },
       fontFamily: {
         sans: [
-          "Inter",
+          "var(--font-lt-soul)",
           "Avenir Next",
           "Avenir",
           "Helvetica Neue",

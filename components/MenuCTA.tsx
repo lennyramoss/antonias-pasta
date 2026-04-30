@@ -11,14 +11,14 @@ export default function MenuCTA() {
         >
           Ver carta completa
         </h2>
-        <p className="mx-auto mt-3 max-w-[280px] text-[1rem] font-semibold leading-snug sm:text-[1.08rem]">
+        <p className="mx-auto mt-3 max-w-[280px] text-[1rem] font-semibold leading-snug text-antonias-body sm:text-[1.08rem]">
           Descubrí todos nuestros platos y cócteles.
         </p>
         <a
           href="https://drive.google.com/file/d/1dfqjvVFCTDOpj_yidwHMakH79GeNIXEb/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex items-center rounded-full bg-antonias-gold px-6 py-3 text-[0.9rem] font-extrabold leading-none text-antonias-ink transition-colors hover:bg-antonias-goldSoft focus:outline-none focus:ring-2 focus:ring-antonias-gold focus:ring-offset-2 focus:ring-offset-antonias-burgundy"
+          className="mt-5 inline-flex items-center rounded-full bg-antonias-gold px-6 py-3 text-[0.9rem] font-extrabold leading-none text-antonias-ink transition-colors hover:bg-antonias-goldSoft focus:outline-none focus:ring-2 focus:ring-antonias-gold focus:ring-offset-2 focus:ring-offset-antonias-base"
         >
           Abrir menú PDF
         </a>

@@ -18,10 +18,16 @@ export default function PlaceholderImage({
       className={`flex items-center justify-center rounded-[10px] bg-antonias-panel ${className}`}
     >
       {variant === "square" && (
-        <span aria-hidden="true" className="block size-14 rounded-[3px] bg-white sm:size-16" />
+        <span
+          aria-hidden="true"
+          className="block size-14 rounded-[3px] bg-antonias-gold sm:size-16"
+        />
       )}
       {variant === "circle" && (
-        <span aria-hidden="true" className="block size-16 rounded-full bg-white sm:size-[74px]" />
+        <span
+          aria-hidden="true"
+          className="block size-16 rounded-full bg-antonias-gold sm:size-[74px]"
+        />
       )}
       {variant === "triangle" && <span aria-hidden="true" className="placeholder-triangle" />}
     </div>
