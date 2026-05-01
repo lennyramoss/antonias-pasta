@@ -6,6 +6,7 @@ import LocationHours from "@/components/LocationHours";
 import MenuCTA from "@/components/MenuCTA";
 import MenuGrid from "@/components/MenuGrid";
 import ReservationCTA from "@/components/ReservationCTA";
+import Reviews from "@/components/Reviews";
 import SectionDivider from "@/components/SectionDivider";
 
 const restaurantJsonLd = {
@@ -17,13 +18,14 @@ const restaurantJsonLd = {
   servesCuisine: ["Italiana", "Pastas artesanales", "Cócteles"],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Paseo 1536",
+    streetAddress: "Trilenium Tigre",
     addressLocality: "Tigre",
     addressRegion: "Buenos Aires",
     addressCountry: "AR",
   },
-  openingHours: "Mo-Su 19:00-00:00",
-  telephone: "+54 9 11 1234-5678",
+  openingHours: "Mo-Su 12:00-02:00",
+  acceptsReservations: true,
+  telephone: "+54 9 11 28376131",
   priceRange: "$$",
   url: "https://antoniaspasta.com",
 };
@@ -45,6 +47,8 @@ export default function Home() {
         <SectionDivider className="mt-24 sm:mt-32" />
         <MenuCTA />
         <SectionDivider />
+        <Reviews />
+        <SectionDivider className="mt-4 sm:mt-8" />
         <ReservationCTA />
         <SectionDivider className="mt-20 sm:mt-24" />
         <LocationHours />
