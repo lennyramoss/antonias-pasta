@@ -1,9 +1,11 @@
+import ReservationTrigger from "@/components/ReservationTrigger";
+
 const footerLinks = [
   {
     title: "Explorar",
     items: [
       { label: "Reseñas", href: "#resenas" },
-      { label: "Reservas", href: "#reservas" },
+      { label: "Reservas", href: "/reservas" },
       { label: "Ubicación", href: "#ubicacion-title" },
     ],
   },
@@ -38,12 +40,11 @@ export default function Footer() {
               Un espacio cálido para comer rico, brindar y volver. Todos los días de
               12:00 a 02:00 en Trilenium Tigre.
             </p>
-            <a
-              href="#reservas"
+            <ReservationTrigger
               className="mt-7 inline-flex items-center rounded-full bg-antonias-gold px-6 py-3 text-[0.95rem] font-extrabold leading-none text-antonias-ink transition-colors hover:bg-antonias-goldSoft focus:outline-none focus:ring-2 focus:ring-antonias-gold focus:ring-offset-2 focus:ring-offset-antonias-base"
             >
               Reservar mesa
-            </a>
+            </ReservationTrigger>
           </div>
 
           {footerLinks.map((column) => (
