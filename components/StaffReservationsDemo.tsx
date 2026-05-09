@@ -292,7 +292,7 @@ export default function StaffReservationsDemo() {
                         {reservation.area}
                       </p>
                       <p className="rounded-[8px] border border-white/10 bg-white/[0.04] px-3 py-2 text-antonias-body">
-                        {reservation.notes}
+                        {reservation.partySize} personas
                       </p>
                     </div>
 
@@ -321,7 +321,7 @@ export default function StaffReservationsDemo() {
                       <th className="px-4 py-3 font-bold">Cliente</th>
                       <th className="px-4 py-3 font-bold">Mesa</th>
                       <th className="px-4 py-3 font-bold">Estado</th>
-                      <th className="px-4 py-3 font-bold">Notas</th>
+                      <th className="px-4 py-3 font-bold">Personas</th>
                       {role === "lead" ? (
                         <th className="px-4 py-3 font-bold">Atencion</th>
                       ) : null}
@@ -357,15 +357,17 @@ export default function StaffReservationsDemo() {
                             {reservation.area}
                           </span>
                         </td>
-                        <td className="px-4 py-4 align-top">
+                        <td className="px-4 py-4 align-center">
                           <span
                             className={`inline-flex rounded-full border px-3 py-1 text-[0.78rem] font-bold ${statusTone[reservation.status]}`}
                           >
                             {DEMO_STATUS_LABELS[reservation.status]}
                           </span>
                         </td>
-                        <td className="max-w-[210px] px-4 py-4 align-top text-[0.9rem] font-medium leading-snug text-antonias-body">
-                          {reservation.notes}
+                        <td className="px-4 py-4 align-center">
+                          <span className="block font-bold text-white">
+                            {reservation.partySize}
+                          </span>
                         </td>
                         {role === "lead" ? (
                           <td className="px-4 py-4 align-top">
