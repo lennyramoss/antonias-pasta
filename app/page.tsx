@@ -8,6 +8,7 @@ import MenuGrid from "@/components/MenuGrid";
 import ReservationCTA from "@/components/ReservationCTA";
 import Reviews from "@/components/Reviews";
 import SectionDivider from "@/components/SectionDivider";
+import StaffDemoCTA from "@/components/StaffDemoCTA";
 
 const restaurantJsonLd = {
   "@context": "https://schema.org",
@@ -50,6 +51,8 @@ export default function Home() {
         <Reviews />
         <SectionDivider className="mt-4 sm:mt-8" />
         <ReservationCTA />
+        <SectionDivider className="mt-4 sm:mt-8" />
+        <StaffDemoCTA />
         <SectionDivider className="mt-20 sm:mt-24" />
         <LocationHours />
       </main>
