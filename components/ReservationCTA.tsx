@@ -24,11 +24,6 @@ export default function ReservationCTA() {
           La reserva ahora se hace en una página aparte, con un flujo guiado, simple
           y paso a paso.
         </p>
-        <ReservationTrigger
-          className="mt-7 inline-flex min-w-52 items-center justify-center whitespace-nowrap rounded-full bg-antonias-gold px-10 py-4 text-[1rem] font-bold leading-none tracking-normal text-antonias-ink shadow-[0_22px_44px_rgba(0,0,0,0.24)] transition hover:-translate-y-0.5 hover:bg-white hover:text-antonias-detail focus:outline-none focus:ring-2 focus:ring-antonias-gold focus:ring-offset-2 focus:ring-offset-black sm:min-w-60 sm:px-12 sm:py-5 sm:text-[1.08rem]"
-        >
-          Ir a reservas
-        </ReservationTrigger>
       </div>
 
       <div className="relative aspect-[4/5] overflow-hidden rounded-[10px]">
@@ -43,6 +38,13 @@ export default function ReservationCTA() {
           className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/45 to-transparent"
           aria-hidden="true"
         />
+        <div className="absolute inset-x-0 bottom-6 flex justify-center px-5 sm:bottom-8">
+          <ReservationTrigger
+            className="inline-flex min-w-52 items-center justify-center whitespace-nowrap rounded-full bg-antonias-gold px-10 py-4 text-[1rem] font-bold leading-none tracking-normal text-antonias-ink shadow-[0_22px_44px_rgba(0,0,0,0.34)] transition hover:-translate-y-0.5 hover:bg-white hover:text-antonias-detail focus:outline-none focus:ring-2 focus:ring-antonias-gold focus:ring-offset-2 focus:ring-offset-black sm:min-w-60 sm:px-12 sm:py-5 sm:text-[1.08rem]"
+          >
+            Ir a reservas
+          </ReservationTrigger>
+        </div>
       </div>
     </section>
   );

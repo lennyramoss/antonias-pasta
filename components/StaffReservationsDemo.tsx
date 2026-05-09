@@ -62,16 +62,16 @@ export default function StaffReservationsDemo() {
 
   return (
     <main className="min-h-screen bg-antonias-base text-white">
-      <section className="border-b border-white/10 bg-[linear-gradient(135deg,#160303_0%,#000000_52%,#2b0809_100%)] px-4 py-6 sm:px-6 lg:px-8">
+      <section className="border-b border-white/10 bg-[linear-gradient(135deg,#160303_0%,#000000_52%,#2b0809_100%)] px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-[0.72rem] font-bold uppercase tracking-[0.28em] text-antonias-gold/80">
+            <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-antonias-gold/80 sm:text-[0.72rem] sm:tracking-[0.28em]">
               Demo staff
             </p>
-            <h1 className="mt-3 text-[2.4rem] font-extrabold uppercase leading-[0.92] text-antonias-gold sm:text-[3.6rem]">
+            <h1 className="mt-3 max-w-[11ch] text-[2.05rem] font-extrabold uppercase leading-[0.92] text-antonias-gold sm:max-w-none sm:text-[3.6rem]">
               Reservas del servicio
             </h1>
-            <p className="mt-3 max-w-2xl text-[0.98rem] font-medium leading-relaxed text-antonias-body">
+            <p className="mt-3 max-w-2xl text-[0.94rem] font-medium leading-relaxed text-antonias-body sm:text-[0.98rem]">
               Panel demo sin backend para visualizar turnos, estados y carga de mesas.
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function StaffReservationsDemo() {
                   key={option}
                   type="button"
                   onClick={() => setRole(option)}
-                  className={`min-h-10 rounded-full px-4 text-[0.88rem] font-bold transition ${
+                  className={`min-h-10 rounded-full px-3 text-[0.82rem] font-bold transition sm:px-4 sm:text-[0.88rem] ${
                     role === option
                       ? "bg-antonias-gold text-antonias-ink"
                       : "text-white/70 hover:text-white"
@@ -103,7 +103,7 @@ export default function StaffReservationsDemo() {
         </div>
       </section>
 
-      <section className="px-4 py-6 sm:px-6 lg:px-8">
+      <section className="px-3 py-4 sm:px-6 sm:py-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-5">
           <div className="grid gap-3 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -171,7 +171,7 @@ export default function StaffReservationsDemo() {
             ) : null}
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 xl:grid-cols-6">
             <Metric label="Reservas" value={summary.activeReservations} />
             <Metric label="Cubiertos" value={summary.expectedGuests} />
             <Metric
@@ -184,10 +184,10 @@ export default function StaffReservationsDemo() {
           </div>
 
           <div className="grid gap-5 xl:grid-cols-[0.95fr_1.55fr]">
-            <section className="rounded-[8px] border border-white/10 bg-[#170405] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.38)]">
+            <section className="rounded-[8px] border border-white/10 bg-[#170405] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.38)] sm:p-4">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <h2 className="text-[1.05rem] font-extrabold uppercase tracking-[0.08em] text-antonias-gold">
+                  <h2 className="text-[0.95rem] font-extrabold uppercase tracking-[0.06em] text-antonias-gold sm:text-[1.05rem] sm:tracking-[0.08em]">
                     Carga por horario
                   </h2>
                   <p className="mt-1 text-[0.9rem] text-antonias-body">
@@ -205,7 +205,7 @@ export default function StaffReservationsDemo() {
                     key={slot.time}
                     type="button"
                     onClick={() => setTime(slot.time)}
-                    className={`grid grid-cols-[4.2rem_1fr_auto] items-center gap-3 rounded-[8px] border p-3 text-left transition ${
+                    className={`grid grid-cols-[3.4rem_1fr] items-center gap-2 rounded-[8px] border p-3 text-left transition sm:grid-cols-[4.2rem_1fr_auto] sm:gap-3 ${
                       time === slot.time
                         ? "border-antonias-gold bg-antonias-gold/15"
                         : "border-white/10 bg-black/20 hover:border-antonias-gold/40"
@@ -224,7 +224,7 @@ export default function StaffReservationsDemo() {
                         style={{ width: `${Math.round(slot.occupancyRate * 100)}%` }}
                       />
                     </span>
-                    <span className="text-right text-[0.82rem] font-semibold text-antonias-body">
+                    <span className="col-span-2 text-[0.8rem] font-semibold text-antonias-body sm:col-span-1 sm:text-right sm:text-[0.82rem]">
                       {slot.reservations} res. · {slot.guests}
                     </span>
                   </button>
@@ -256,7 +256,64 @@ export default function StaffReservationsDemo() {
                 </button>
               </div>
 
-              <div className="overflow-x-auto">
+              <div className="grid gap-3 p-3 md:hidden">
+                {filteredReservations.map((reservation) => (
+                  <article
+                    key={reservation.id}
+                    className="rounded-[8px] border border-white/10 bg-black/20 p-3"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="text-[1rem] font-extrabold text-white">
+                          {reservation.time}
+                        </p>
+                        <p className="mt-1 text-[0.82rem] font-semibold text-antonias-body">
+                          {reservation.partySize} pers. · {reservation.tableLabel}
+                        </p>
+                      </div>
+                      <span
+                        className={`shrink-0 rounded-full border px-2.5 py-1 text-[0.72rem] font-bold ${statusTone[reservation.status]}`}
+                      >
+                        {DEMO_STATUS_LABELS[reservation.status]}
+                      </span>
+                    </div>
+
+                    <div className="mt-3">
+                      <p className="font-bold leading-snug text-white">
+                        {reservation.name}
+                      </p>
+                      <p className="mt-1 text-[0.82rem] text-antonias-body">
+                        {reservation.phone}
+                      </p>
+                    </div>
+
+                    <div className="mt-3 grid grid-cols-2 gap-2 text-[0.82rem]">
+                      <p className="rounded-[8px] border border-white/10 bg-white/[0.04] px-3 py-2 text-antonias-body">
+                        {reservation.area}
+                      </p>
+                      <p className="rounded-[8px] border border-white/10 bg-white/[0.04] px-3 py-2 text-antonias-body">
+                        {reservation.notes}
+                      </p>
+                    </div>
+
+                    {role === "lead" ? (
+                      <div className="mt-3">
+                        <span
+                          className={`inline-flex rounded-full border px-3 py-1 text-[0.76rem] font-bold ${
+                            reservation.priority === "attention"
+                              ? "border-red-300/25 bg-red-400/10 text-red-100"
+                              : "border-white/10 bg-white/[0.04] text-white/45"
+                          }`}
+                        >
+                          {reservation.priority === "attention" ? "Revisar" : "Normal"}
+                        </span>
+                      </div>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+
+              <div className="hidden overflow-x-auto md:block">
                 <table className="w-full min-w-[760px] border-collapse text-left">
                   <thead className="bg-black/25 text-[0.72rem] uppercase tracking-[0.18em] text-white/50">
                     <tr>
